@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page">
@@ -15,26 +17,26 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link nav__link--active" href="./index.html">Главная</a>
+            <a class="nav__link button" href="./index.html">Главная</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./catalog.html">Фото и видео</a>
+            <a class="nav__link nav__link--active button" href="./catalog.html">Фото и видео</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="./form.html">Форма отзыва</a>
+            <a class="nav__link button" href="./form.html">Форма отзыва</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
+            <a class="nav__link button" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
           </li>
         </ul>
       </nav>
-      <button class="main-header__toggle-menu" type="button" aria-label="Меню" aria-expanded="true">
-        <img src="./source/img/inline-svg/icon-menu.svg" width="23" height="22" alt="">
-        <img src="./source/img/inline-svg/icon-cross.svg" width="23" height="23" alt="">
-      </button>
+      <button class="toggle-menu toggle-menu--opened" type="button" aria-label="Меню" aria-expanded="true"></button>
     </header>
 
     <main class="main">
+      <div class="sedona-image sedona-image--catalog">
+        <img class="sedona-image__text" src="./img/sedona-image/sedona-single.svg" width="229" height="39" alt="Седона">
+      </div>
       <section class="media">
         <h1 class="media__title">Фото и видео</h1>
         <p class="media__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и
@@ -43,54 +45,46 @@
           <li class="photo">
             <figure class="photo__item">
               <a href="#">
-                <img src="./img/catalog/photo-1-m.jpg" width="280" height="280"
+                <img class="photo__image" src="./img/catalog/photo-1-m.jpg" width="280" height="280"
                   alt="Изображение фотографии народные просторы">
               </a>
               <figcaption class="photo__description">Народные просторы</figcaption>
             </figure>
             <p class="photo__autor">Автор фото: Борис</p>
-            <div class="reaction">
-              <span class="reaction__count">1350</span>
-            </div>
+            <span class="reaction">1350</span>
           </li>
           <li class="photo">
             <figure class="photo__item">
               <a href="#">
-                <img src="./img/catalog/photo-2-m.jpg" width="280" height="280"
+                <img class="photo__image" src="./img/catalog/photo-2-m.jpg" width="280" height="280"
                   alt="Изображение фотографии местная растительность">
               </a>
               <figcaption class="photo__description">Местная растительность</figcaption>
             </figure>
             <p class="photo__autor">Автор фото: Сергей</p>
-            <div class="reaction">
-              <span class="reaction__count">143</span>
-            </div>
+            <span class="reaction">143</span>
           </li>
           <li class="photo">
             <figure class="photo__item">
               <a href="#">
-                <img src="./img/catalog/photo-3-m.jpg" width="280" height="280"
+                <img class="photo__image" src="./img/catalog/photo-3-m.jpg" width="280" height="280"
                   alt="Изображение фотографии дорога на север">
               </a>
               <figcaption class="photo__description">Дорога на север</figcaption>
             </figure>
             <p class="photo__autor">Автор фото: Петр</p>
-            <div class="reaction">
-              <span class="reaction__count">96</span>
-            </div>
+            <span class="reaction">96</span>
           </li>
           <li class="photo">
             <figure class="photo__item">
               <a href="#">
-                <img src="./img/catalog/photo-4-m.jpg" width="280" height="280"
+                <img class="photo__image" src="./img/catalog/photo-4-m.jpg" width="280" height="280"
                   alt="Изображение фотографии мост дьявола">
               </a>
               <figcaption class="photo__description">Мост дьявола</figcaption>
             </figure>
             <p class="photo__autor">Автор фото: Антон</p>
-            <div class="reaction">
-              <span class="reaction__count">254</span>
-            </div>
+            <span class="reaction">254</span>
           </li>
         </ul>
       </section>
@@ -99,10 +93,11 @@
         <h2 class="presentation__title">Все еще сомеваетесь?</h2>
         <p class="presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
           раз!</p>
-        <a class="presentation__preview" href="#">
-          <img src="./img/catalog/video-preview-m.jpg" alt="Изображение превью видео">
-          <span>Плэй</span>
-        </a>
+        <div class="presentation__preview" href="#">
+          <img class="presentation__image" src="./img/catalog/video-preview-m.jpg" alt="Изображение превью видео">
+          <button class="presentation__play" type="button"><span class="visually-hidden">Воспроизвести
+              видео</span></button>
+        </div>
       </section>
     </main>
 
@@ -119,9 +114,9 @@
           <a class="social__link" href="#"><span class="visually-hidden">Ютуб</span></a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-      </div>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+        <img class="copyright__image" src="./img/htmlacademy.svg" width="27" height="35" alt="Логотип html академии">
+      </a>
     </footer>
   </div>
 </body>
