@@ -1,0 +1,1 @@
+const toggleMenu=document.querySelector(".toggle-menu"),nav=document.querySelector(".nav");nav?.classList.remove("nav--nojs"),toggleMenu?.addEventListener("click",(()=>{nav.classList.toggle("nav--opened"),nav.classList.contains("nav--opened")?toggleMenu.ariaExpanded=!0:toggleMenu.ariaExpanded=!1}));
