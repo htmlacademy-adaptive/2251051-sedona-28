@@ -44,6 +44,7 @@
   margin-block: 0;
   padding-inline-start: 0;
   list-style: none;
+  z-index: 1000;
 
   &::before {
     position: absolute;
