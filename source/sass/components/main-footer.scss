@@ -33,15 +33,16 @@
   align-items: center;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--blue);
   }
 
   &:active {
     color: var(--gray-300);
   }
+}
 
-  & svg {
-    margin-inline-start: 8px;
-  }
+.main-footer__svg {
+  margin-inline-start: 8px;
 }

@@ -21,6 +21,9 @@
         <img class="main-header__logo-image" src="img/svg/logo.svg" width="185" height="96" alt="Логотип сайта Седона">
       </a>
 
+      <!-- Открытое меню в потоке при отключённом JavaScript. class="nav nav--nojs" -->
+      <!-- Открытое меню вне потока при включённом JavaScript. class="nav nav--opened" -->
+      <!-- Закрытое меню. class="nav" -->
       <nav class="nav nav--nojs">
         <ul class="nav__list">
           <li class="nav__item">
@@ -87,22 +90,20 @@
 
               <li class="city-list__item city-list__item--food">
                 <span class="city-list__item-title">Еда</span>
-                <p class="city-list__item-text city-list__item-text--food">Всегда заказывайте фирменный бургер, вы не
-                  разочаруетесь!</p>
+                <p class="city-list__item-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
 
               <li class="city-list__item city-list__item--souvenirs">
                 <span class="city-list__item-title">Сувениры</span>
-                <p class="city-list__item-text city-list__item-text--souvenirs">Не только китайского, но и местного
-                  производства!</p>
+                <p class="city-list__item-text">Не только китайского, <span>но и местного производства!</span></p>
               </li>
             </ul>
           </li>
 
           <li class="features__item features__item--bridge">
-            <div class="features__item-top features__item-top--bridge">
-              <header class="feature-header feature-header--bridge">
-                <h3 class="feature-header__title feature-header__title--bridge">Там есть <span>мост дьявола</span></h3>
+            <div class="features__item-top">
+              <header class="feature-header">
+                <h3 class="feature-header__title">Там есть <span>мост дьявола</span></h3>
                 <span class="feature-header__number">— №2 —</span>
                 <p class="feature-header__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </header>
@@ -120,29 +121,27 @@
             </div>
           </li>
 
-          <li class="features__item features__item--small feature-header feature-header--gray">
+          <li class="features__item features__item--small feature-header feature-header--gray feature-header--square">
             <div class="feature-header__container">
               <p class="feature-header__title">Небольшая <span>площадь</span></p>
               <span class="feature-header__number">— №3 —</span>
-              <p class="feature-header__text">Все интересные места находятся очень&nbsp;близко</p>
+              <p class="feature-header__text">Все интересные места находятся очень близко</p>
             </div>
           </li>
 
           <li class="features__item features__item--small feature-header feature-header--gray feature-header--road">
             <div class="feature-header__container">
-              <p class="feature-header__title feature-header__title--road">Красивая <span>дорога</span></p>
+              <p class="feature-header__title">Красивая <span>дорога</span></p>
               <span class="feature-header__number">— №4 —</span>
-              <p class="feature-header__text feature-header__text--road">Ехать в Седону из Лас-Вегаса совсем
-                не&nbsp;скучно!</p>
+              <p class="feature-header__text">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
             </div>
           </li>
 
           <li class="features__item features__item--small feature-header feature-header--gray feature-header--tourists">
             <div class="feature-header__container">
-              <p class="feature-header__title feature-header__title--tourists">Мало <span>туристов</span></p>
+              <p class="feature-header__title">Мало <span>туристов</span></p>
               <span class="feature-header__number">— №5 —</span>
-              <p class="feature-header__text feature-header__text--small">Большинство едет в Гранд Каньон
-                и&nbsp;толпится там</p>
+              <p class="feature-header__text">Большинство едет в Гранд Каньон и толпится там</p>
             </div>
           </li>
         </ol>
@@ -186,7 +185,7 @@
       </ul>
       <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive"
         aria-label="Лендинг интенсива HTML и CSS. Адаптивная верстка и автоматизация" target="_blank">Разработано
-        <svg width="36" height="36">
+        <svg class="main-footer__svg" width="36" height="36">
           <use xlink:href="img/sprite.svg#htmlacademy"></use>
         </svg>
       </a>

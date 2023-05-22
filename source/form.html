@@ -12,7 +12,6 @@
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="stylesheet" href="/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="/js/menu.js" type="module"></script>
 </head>
 
 <body class="page__body">
@@ -58,18 +57,18 @@
               <h2 class="fieldset__legend">Представьтесь:</h2>
               <div class="field fieldset__field-row">
                 <label class="field__label" for="name">Имя*:</label>
-                <input class="field__input" type="text" name="submitted-name" autocomplete="name" id="name" value="Пётр"
-                  required>
+                <input class="field__input" type="text" name="submitted-name" autocomplete="name" id="name"
+                  placeholder="Иванов" required>
               </div>
               <div class="field fieldset__field-row">
                 <label class="field__label" for="surname">Фамилия*:</label>
                 <input class="field__input" type="text" name="submitted-name" autocomplete="name" id="surname"
-                  value="Пустота" required>
+                  placeholder="Иван" required>
               </div>
               <div class="field fieldset__field-row">
                 <label class="field__label" for="patronymic">Отчество*:</label>
                 <input class="field__input" type="text" name="submitted-name" autocomplete="name" id="patronymic"
-                  value="Викторович" required>
+                  placeholder="Иванович" required>
               </div>
             </div>
 
@@ -96,20 +95,17 @@
               <div class="field">
                 <input class="visually-hidden field__radio" type="radio" id="positive" name="impression"
                   value="Скорее положительное" checked>
-                <label class="field__label field__label--bold field__label--radio" for="positive">Скорее
-                  положительное</label>
+                <label class="field__label-radio" for="positive">Скорее положительное</label>
               </div>
               <div class="field">
                 <input class="visually-hidden field__radio" type="radio" id="negative" name="impression"
                   value="Скорее отрицательное">
-                <label class="field__label field__label--bold field__label--radio" for="negative">Скорее
-                  отрицательное</label>
+                <label class="field__label-radio" for="negative">Скорее отрицательное</label>
               </div>
               <div class="field">
                 <input class="visually-hidden field__radio" type="radio" id="difficult" name="impression"
                   value="Затрудняюсь ответить">
-                <label class="field__label field__label--bold field__label--radio" for="difficult">Затрудняюсь
-                  ответить</label>
+                <label class="field__label-radio" for="difficult">Затрудняюсь ответить</label>
               </div>
             </div>
           </div>
@@ -119,21 +115,19 @@
             <div class="feedback__checkbox">
               <div class="field">
                 <input class="visually-hidden field__checkbox" type="checkbox" id="bridge" name="bridge">
-                <label class="field__label field__label--bold field__label--checkbox" for="bridge">Мост дьявола</label>
+                <label class="field__label-checkbox" for="bridge">Мост дьявола</label>
               </div>
               <div class="field">
                 <input class="visually-hidden field__checkbox" type="checkbox" id="mountain" name="mountain" checked>
-                <label class="field__label field__label--bold field__label--checkbox"
-                  for="mountain">Гора-Колокол</label>
+                <label class="field__label-checkbox" for="mountain">Гора-Колокол</label>
               </div>
               <div class="field">
                 <input class="visually-hidden field__checkbox" type="checkbox" id="slide-park" name="slide-park">
-                <label class="field__label field__label--bold field__label--checkbox"
-                  for="slide-park">Слайд-парк</label>
+                <label class="field__label-checkbox" for="slide-park">Слайд-парк</label>
               </div>
               <div class="field">
                 <input class="visually-hidden field__checkbox" type="checkbox" id="cliffs" name="cliffs">
-                <label class="field__label field__label--bold field__label--checkbox" for="cliffs">Красные скалы</label>
+                <label class="field__label-checkbox" for="cliffs">Красные скалы</label>
               </div>
             </div>
           </div>
@@ -177,13 +171,15 @@
       </ul>
       <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive"
         aria-label="Лендинг интенсива HTML и CSS. Адаптивная верстка и автоматизация" target="_blank">Разработано
-        <svg width="36" height="36">
+        <svg class="main-footer__svg" width="36" height="36">
           <use xlink:href="img/sprite.svg#htmlacademy"></use>
         </svg>
       </a>
     </footer>
   </div>
 
+  <!-- Открытое модальное окно. class="modal" -->
+  <!-- Закрытое модальное окно. class="modal modal--closed" -->
   <div class="modal modal--closed">
     <div class="modal__container">
       <h2 class="modal__title">Что-то пошло не&nbsp;так!</h2>
@@ -192,18 +188,19 @@
     </div>
   </div>
 
-  <div class="modal modal--closed">
-    <div class="modal__container modal-review">
+  <div class="modal modal-review modal--closed">
+    <div class="modal__container modal-review__container">
       <div class="modal-review__header">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__text modal-review__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В&nbsp;ближайшее
-          время мы опубликуем его на сайте.</p>
+        <h2 class="modal__title modal-review__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__text modal-review__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.</p>
+        <p class="modal__text modal-review__text">В ближайшее время мы опубликуем его на сайте.</p>
       </div>
       <div class="modal-review__footer">
         <button class="button modal__button modal-review__button" type="button">Закрыть окно</button>
       </div>
     </div>
   </div>
+  <script src="/js/menu.js"></script>
 </body>
 
 </html>
