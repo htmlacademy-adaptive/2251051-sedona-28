@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -20,36 +20,49 @@
   flex-direction: column;
   align-items: center;
   padding-inline: 42px;
-  padding-block: 53px 35px;
+  padding-block: 45px 35px;
   background-color: var(--white);
   max-width: 400px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  margin-block-start: 116px;
+
+  @media (min-width: $tablet-width) {
+    margin-block-start: 283px;
+    padding-block: 53px 49px;
+  }
 }
 
 .modal__title {
-  margin-block: 0 36px;
+  margin-block: 0 25px;
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    margin-block-end: 21px;
     font-size: 30px;
     line-height: 40px;
   }
 }
 
 .modal__text {
-  margin-block: 0 20px;
+  margin-block: 0 28px;
   color: var(--black-100);
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-block-end: 28px;
+    margin-block-end: 44px;
   }
 }
 
 .modal__button {
+  font-size: 18px;
+  line-height: 26px;
+
   @media (min-width: $tablet-width) {
     width: 100%;
+    max-width: 272px;
+    font-size: 21px;
   }
 }
